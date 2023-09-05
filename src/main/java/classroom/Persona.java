@@ -8,7 +8,7 @@ public class Persona {
     
     static {
         totalPersonas = 0;
-        cedula = 3;
+        //cedula = 3;
     }
 
     public Persona(long cedula, String nombre) {
@@ -30,8 +30,15 @@ public class Persona {
     }
 
     public Persona(String nombre) {
-        this.nombre = "";
+        this.nombre = nombre; //nombre antes era ""
         totalPersonas++;
+        cedula = 1;
+    }
+    
+    public Persona() { //este constructor lo defini para cuando no hay argumentos
+        this.nombre = ""; 
+        totalPersonas++;
+        cedula = 0;
     }
     
     public long getCedula() {
